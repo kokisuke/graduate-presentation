@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卒業制作スライド</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slideshow">
+    <section class="slide active">
+      <h1>卒業制作テーマ</h1>
+      <p class="tagline">観光地混雑予測アプリの開発</p>
+      <ul>
+        <li>名古屋市を対象にリアルタイム混雑状況＋予測機能</li>
+        <li>観光客の分散・混雑緩和・快適な観光を支援</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>制作の目的</h1>
+      <ul>
+        <li>観光地の混雑集中問題（インバウンドの影響）</li>
+        <li>混雑情報を「見える化」し、観光の質向上を目指す</li>
+        <li>運営側にも混雑傾向の把握に役立てる</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>対象地域と展望</h1>
+      <ul>
+        <li>まずは名古屋市の主要観光地（名古屋城・大須観音など）</li>
+        <li>全国展開を目指す（京都・大阪・東京・地方都市）</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>主な機能</h1>
+      <ul>
+        <li>リアルタイム混雑状況表示</li>
+        <li>混雑予測機能（曜日・時間・天気・イベントなど）</li>
+        <li>ヒートマップ表示 / 混雑アラート / 空いてる時間の提案</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>データ収集方法</h1>
+      <ul>
+        <li>ユーザー投稿型（★1〜5）</li>
+        <li>センサーデータとの連携（将来的）</li>
+        <li>SNS・Webデータ収集（自然言語処理）</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>使用予定技術</h1>
+      <ul>
+        <li>HTML / CSS / JavaScript（PWA化）</li>
+        <li>Firebase（リアルタイムDB, 認証）</li>
+        <li>Google Maps API / Chart.js</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>将来的な展開</h1>
+      <ul>
+        <li>自治体や観光庁と連携した地域観光戦略支援</li>
+        <li>多言語対応でインバウンド支援</li>
+        <li>AIによる混雑予測の高度化</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    document.body.addEventListener('click', () => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    });
+  </script>
+</body>
+</html>
